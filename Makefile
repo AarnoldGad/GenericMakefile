@@ -1,6 +1,6 @@
 # Master Makefile
 
-include EpisodeThree.var.mk
+include target.var.mk
 
 .PHONY: all clean
 
