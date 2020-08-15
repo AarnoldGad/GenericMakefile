@@ -6,8 +6,8 @@ include target.var.mk
 
 all:
 	@echo "---------[Building : $(PROJECT) - $(CONFIG)]---------"
-	@make -f "EpisodeThree.mk"
+	@make -f "target.mk"
 
 clean:
 	@echo "---------[Cleaning : $(PROJECT) - $(CONFIG)]---------"
-	@make -f "EpisodeThree.mk" clean
+	@make -f "target.mk" clean
