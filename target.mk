@@ -1,4 +1,4 @@
-# Project Makefile
+# Target Makefile
 
 include target.var.mk
 
@@ -10,7 +10,7 @@ $(OUTFILE): $(OBJ) | $(OUTDIR)
 	$(CXX) -o $@ $(OBJ) $(LIBDIRS) $(LIBS) $(LINKFLAGS)
 
 $(INTDIR)/%.o: %.cpp | $(INTDIR)
-	$(CXX) -o $@ -c $< -MMD -MP $(CXXFLAGS) $(INCLUDEDIRS)
+	$(CXX) -o $@ -c $< -MMD -MP $(CXXFLAGS) $(INCLUDEDIRS) $(DEFINES)
 
 $(INTDIR):
 	@test -d $@ || mkdir -p $@

@@ -1,6 +1,6 @@
 # Makefiles common variables
 
-PROJECT=proj
+PROJECT=TARGET
 PROJECTPATH=$(realpath .)
 
 CONFIG=Debug
@@ -9,7 +9,7 @@ CONFIG=Debug
 BINDIR=bin
 OUTDIR=$(BINDIR)/$(CONFIG)
 INTDIR=$(OUTDIR)/out
-EXEC=proj
+EXEC=TARGET
 OUTFILE=$(abspath $(OUTDIR))/$(EXEC)
 
 INCLUDEDIRS=-I/usr/include -I/usr/local/include -I$(PROJECTPATH)/include
@@ -22,7 +22,7 @@ CXX=g++
 CGLOBALFLAGS=-Wall -Wextra -fexceptions -std=c17 -pedantic
 CXXGLOBALFLAGS=-fexceptions -std=c++17 -pedantic \
 -Wall -Wextra -Wold-style-cast -Woverloaded-virtual -Wfloat-equal -Wwrite-strings -Wpointer-arith -Wcast-qual \
--Wcast-align -Wconversion -Wshadow -Weffc++ -Wredundant-decls -Wdouble-promotion -Winit-self -Wswitch-default \
+-Wcast-align -Wconversion -Wshadow -Wredundant-decls -Wdouble-promotion -Winit-self -Wswitch-default \
 -Wswitch-enum -Wundef -Wlogical-op -Winline
 
 LINKFLAGS=-m64
